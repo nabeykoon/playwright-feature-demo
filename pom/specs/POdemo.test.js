@@ -26,7 +26,8 @@ describe("UI tests for bookstore using playwright", () => {
 
   it("should be able to login", async () => {
     await loginPage.enterUsername("username");
-    await loginPage.enterUsername("password");
+    await loginPage.enterPassword("password");
+    await loginPage.clickLoginBtn();
     expect(await page.title()).not.toBeNull();
   });
 

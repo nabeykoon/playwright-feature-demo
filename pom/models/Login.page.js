@@ -18,7 +18,7 @@ class LoginPage extends BasePage {
     await this.page.fill(this.userNameTxt, username);
   }
 
-  async enterUsername(password) {
+  async enterPassword(password) {
     await this.page.fill(this.passwordTxt, password);
   }
 
