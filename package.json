@@ -6,10 +6,14 @@
   "scripts": {
     "test": "jest"
   },
+  "jest": {
+    "testPathIgnorePatterns": ["/tests/"]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@applitools/eyes-playwright": "^1.10.0",
     "jest": "^27.3.1",
     "playwright": "^1.15.1"
   }
