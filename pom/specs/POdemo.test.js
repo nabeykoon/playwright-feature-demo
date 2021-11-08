@@ -32,7 +32,7 @@ describe("UI tests for bookstore using playwright", () => {
   });
 
   it("should be logged in as Jack Gomaz", async () => {
-    expect(await homePage.getUsername()).toBe("Jack Gomaz");
+    expect(await homePage.getUsername()).toBe("Jack Gomez");
   });
 
   it("should have total balance balance of $350", async () => {
@@ -40,7 +40,7 @@ describe("UI tests for bookstore using playwright", () => {
   });
 
   it("should have credit availble balance of $17800", async () => {
-    expect(await homePage.getBalance("credit")).toBe("$17800");
+    expect(await homePage.getBalance("credit")).toBe("$17,800");
   });
 
   it("should have due today of $180", async () => {

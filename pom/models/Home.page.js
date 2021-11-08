@@ -10,12 +10,12 @@ class HomePage extends BasePage {
   }
 
   async getUsername() {
-    const user = await this.page.$(this.loggedUserLbl);
+    let user = await this.page.waitForSelector(this.loggedUserLbl);
     return await user.innerText();
   }
 
   async getBalance(balType) {
-    const balArray = await this.page.$$(this.balances);
+    let balArray = await this.page.$$(this.balances);
     if (balType == "total") {
       return (await balArray[0].$("span")).innerText();
     } else if (balType == "credit") {
